@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class EnemyBulletMove : MonoBehaviour
+{
+    Transform tr;
+    public float speed;
+
+    void Start()
+    {
+        tr = GetComponent<Transform>();
+        StartCoroutine(DestroySelf());
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        tr.Translate(Vector3.down * speed);
+    }
+    IEnumerator DestroySelf()
+    {
+        yield return new WaitForSeconds(1.0f);
+        Destroy(this.gameObject);
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        SceneManager.LoadScene("GameOver");
+    }
+}
+    
