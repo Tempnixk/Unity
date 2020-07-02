@@ -6,7 +6,32 @@ using UnityEngine.UI;
 public class MoneyMove : MonoBehaviour
 {
     public Vector2 point;
-    
+   
     Text txt;
+    void Start()
+    {
+            txt = transform.GetComponentInChildren<Text>();
+            
+            GameManager gm = GameObject.Find("GameManager").GetImponent<GameManager>();
+            txt.text="+"+gm.moneyInncreaseAmout.ToString("###,###");
+            
+            Destroy(this.gameObject, 10f);
+    }
+    
+    void Update()
+    {
+    transform.position = Vector2.MoveTowards(transform.position, point, Time.deltaTime * 10f);
+    
+    SpriteRenderer sr = GetComponent<SpriteRenderer>();
+    sr.color = new Color(sr.color.r, sr.color.g, sr color.b, sr.color.a - 0.01f);
+    }
+    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color =Color.red;
+        Gizmos.DrawSphere(point, 0.2f);
+    }
+    
+}
     
     
