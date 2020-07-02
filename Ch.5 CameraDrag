@@ -11,6 +11,8 @@ public class CameraDrag : MonoBehaviour
 void Update()
 {
 }
-VOid Move()
+
+
+void Move()
 {
 }
