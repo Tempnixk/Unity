@@ -32,4 +32,23 @@ public class CameraDrag : MonoBehaviour
         {
             firstTouch = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
+        if(Input.GetMouseButton(0))
+        {
+                Vector2 currentTouch = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                
+                if(Vector2.Distance(firstTouch, currentTouch)>0.4f)//드래그 범위일때
+                {
+                        if(firstTouch.y<currentTouch.y)
+                        {
+                                if(tr.position.y > limitMinY)
+                                        tr.Translate(Vector2.dowb * dragSpeed);
+                        }
+                        else if(firstTouch.y > currentTouch.y)//처음 터치보다 아래로 드래그 했을때
+                        {
+                            if(tr.position.y < limitMaxY)//카메라 드래그 기능 범위일 떄
+                                tr.Translate(Vector2.up * dragSpeed);
+                        }
+                    }
+                }
+            }
     }
