@@ -5,14 +5,31 @@ using UnityEngine.EventSystems;
 
 public class CameraDrag : MonoBehaviour
 {
-
+    private Transform tr;
+    private Vector2 firstTouch;
+    public float limitMinY;
+    public float limitMaxY;
+    public float dragSpeed = 0.5f;
+   
 }
 
-void Update()
-{
-}
+    void Start()
+    {
+       tr= GetComponent<Transform>();
+    }
+    void Update()
+    {
+        if(EventSystem.current.IsPointerOverGameObject() == false)
+        {
+            Move();
+            
+        }
 
 
-void Move()
-{
-}
+    void Move()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            firstTouch = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
+    }
