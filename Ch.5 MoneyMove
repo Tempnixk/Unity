@@ -1,0 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class MoneyMove : MonoBehaviour
+{
+    public Vector2 point;
+    
+    Text txt;
+    
+    
