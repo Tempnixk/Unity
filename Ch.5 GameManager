@@ -1,0 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+
+public class GameManager : MonoBehaviour
+{
+    public long money;
+    public long moneyIncreaseAmount
+    
+    public Text textMoney;
+    
+    void Start ()
+    {
+    
+    }
+    void Update()
+    {
+       ShowInfo();
+       MoneyIncrease();
+    }
+    
+    //소지금 증가
+    void MoneyIncrease()
+    {
+        if(Input.GetMouseButtonDown(0))//마우스 버튼을 눌렀을 때
+        {
+          if(EventSystem.current.IsPointerOverGameObject()==false)
+        }
+    }
+  }
+ 
+    void ShowInfo()
+    {
+        if(money==0)
+            textMoney.text = "0원";
+        else
+            textMoney.text = Money.Tostring("###,###") + "원";
+    }
+}
