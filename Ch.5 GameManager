@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public long moneyIncreaseAmount;
     public GameObject prefabMoney;
     public Text textMoney;
+    public long moneyIncreaseLevel; // 클릭 당 단가 업그레이드 레벨
+    public long moneyIncreasePrice; // 업그레이드 가격
+    public Text textPrice; // 표시할 텍스트
     
     void Start ()
     {
@@ -35,6 +38,14 @@ public class GameManager : MonoBehaviour
                 }
         }
     }
+    void UpdatePanelText()
+        {
+                textPrice.text = "Lv." + moneyIncreaseLevel + "단가상승\n\n";
+                textPrice.text += "외주 당 단가>\n";
+                textPrice.text += moneyIncreaseAmount.ToString("###,###")+"원\n";
+                textPrice.text += "업그레이드 가격>\n";
+                textPrice.text += moneyIncreasePrice.ToString("###,###")+" 원";
+        }
   }
  
     void ShowInfo()
