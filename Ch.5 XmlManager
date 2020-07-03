@@ -14,3 +14,15 @@ public class XmlManager
         }
     }
     
+    public static T XmlLoad<T>(string path)
+    {
+            System.Xml.Serialization.XmlSerializer sr = new System.Xml.Serialization.XmlSerializer(typeof(T));
+            using(System.IO.FileStream fs = new System.IO.FileStream(path, System.IO.FileMode.Open))
+            {
+                    T t = (T)sr.Deserialize(fs);
+                    fs.Close();
+                    
+                    return t;
+            }
+    }
+}
