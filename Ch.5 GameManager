@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     public long moneyIncreasePrice; // 업그레이드 가격
     public Text textPrice; // 표시할 텍스트
     public Button buttonPrice; // 단가 업그레이드 버튼
+    public int employeeCount; //직원 수(레벨)
+    public Text textRecruit; //직원 고용 패널의 텍스트
+    public Button buttonRecruit;
     
     
     
@@ -27,6 +30,7 @@ public class GameManager : MonoBehaviour
        ShowInfo();
        MoneyIncrease();
        ButtonActiveCheck();
+       UpdateRecruitPanelText();
     }
     
     //소지금 증가
@@ -51,6 +55,14 @@ public class GameManager : MonoBehaviour
                 textPrice.text += "업그레이드 가격>\n";
                 textPrice.text += moneyIncreasePrice.ToString("###,###")+" 원";
         }
+    void UpdateRecruitPanelText()
+    {
+        textRecruit.text = "Lv." + employeeCount + " 직원 고용\n\n";
+        textRecruit.text += "직원 1초 당 단가>\n";
+        textRecruit.text += AutoWork.autoMoneyIncreaseAmount.ToString("###,###")+"원\n";
+        textRecruit.text += "업그레이드 가격>\n";
+        textRecruit.text += AutoWork.autoIncreasePrice.ToString("###,###")+"원";
+    }
     public void UpgradePrice()
     {
         if(money>=moneyIncreasePrice)
