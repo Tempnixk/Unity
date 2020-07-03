@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
     public long moneyIncreaseLevel; // 클릭 당 단가 업그레이드 레벨
     public long moneyIncreasePrice; // 업그레이드 가격
     public Text textPrice; // 표시할 텍스트
+    public Button buttonPrice; // 단가 업그레이드 버튼
+    
+    
+    
     
     void Start ()
     {
@@ -22,6 +26,7 @@ public class GameManager : MonoBehaviour
     {
        ShowInfo();
        MoneyIncrease();
+       ButtonActiveCheck();
     }
     
     //소지금 증가
@@ -54,6 +59,17 @@ public class GameManager : MonoBehaviour
             moneyIncreaseLevel += 1;
             moneyIncreaseAmount += moneyIncreaseLevel * 100;
             moneyIncreasePrice += moneyIncreaseLevel * 500;
+        }
+    void ButtonActiveCheck()
+        {
+            if(money>=moneyIncreasePrice)
+            {
+                buttonPrice.interactable = true;
+            }
+            else
+            {
+                buttonPrice.interactable = false;
+            }
         }
   }
  
