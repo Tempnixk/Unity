@@ -14,17 +14,17 @@ public class GameManager : MonoBehaviour
     public long moneyIncreasePrice; // 업그레이드 가격
     public Text textPrice; // 표시할 텍스트
     public Button buttonPrice; // 단가 업그레이드 버튼
-    public int employeeCount; //직원 수(레벨)
-    public Text textRecruit; //직원 고용 패널의 텍스트
+    public int employeeCount; // 직원 수(레벨)
+    public Text textRecruit; // 직원 고용 패널의 텍스트
     public Button buttonRecruit;
-    public int width; //가로 최대 직원 수
-    public float space; //직원 간격
+    public int width; // 가로 최대 직원 수
+    public float space; // 직원 간격
     public GameObject prefabEmployee; // 직원 프리팹 
     public Text textPerson;
     public float spaceFloor; // 바닥의 간격
-    public int floorCapacity; //바닥이 수용 가능한 인원 수
-    public int currentFloor;// 현재 바닥의 수
-    public GameObject prefabFloor;//바닥 프리팹
+    public int floorCapacity; // 바닥이 수용 가능한 인원 수
+    public int currentFloor; // 현재 바닥의 수
+    public GameObject prefabFloor; // 바닥 프리팹
     
     
     
