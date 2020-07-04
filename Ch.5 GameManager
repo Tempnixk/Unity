@@ -104,6 +104,16 @@ public class GameManager : MonoBehaviour
        float spotY = bossSpot.y - (employeeCount/width)*space;
        Instaniate(prefabEmployee, new Vector2(spotX, spotY), Quaternion.identity);
        }
+       public void Recruit()
+       {
+       if(money>=AutoWork.autoIncreasePrice)
+       {
+       money-=AutoWork.autoIncreasePrice;
+       employeeCOunt += 1;
+       AutoWork.autoMoneyIncreaseAmount += moneyIncreaseLevel * 10;
+       AutoWork.autoIncreasePrice +=employeeCount * 500;
+       
+       CreateEmployee();
   }
  
     void ShowInfo()
