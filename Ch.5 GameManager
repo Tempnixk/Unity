@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public Button buttonRecruit;
     public int width; //가로 최대 직원 수
     public float space; //직원 간격
-    public GameObject prefabEmployee; // 직원 
+    public GameObject prefabEmployee; // 직원 프리팹 
     
     
     
