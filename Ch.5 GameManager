@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
             moneyIncreasePrice += moneyIncreaseLevel * 500;
         }
     void ButtonActiveCheck()
-        {
+         {
             if(money>=moneyIncreasePrice)
             {
                 buttonPrice.interactable = true;
@@ -82,7 +82,18 @@ public class GameManager : MonoBehaviour
             {
                 buttonPrice.interactable = false;
             }
-        }
+         }
+    void ButtonRecruitActiveCheck()
+        {
+            if(money >= AutoWork.autoIncreasePrice)
+            {
+                buttonRecruit.interactble = true;
+            }
+            else
+            {
+                buttonRecruit.interactble = false;
+            }
+       }
   }
  
     void ShowInfo()
