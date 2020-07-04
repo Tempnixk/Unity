@@ -21,7 +21,10 @@ public class GameManager : MonoBehaviour
     public float space; //직원 간격
     public GameObject prefabEmployee; // 직원 프리팹 
     public Text textPerson;
-    
+    public float spaceFloor; // 바닥의 간격
+    public int floorCapacity; //바닥이 수용 가능한 인원 수
+    public int currentFloor;// 현재 바닥의 수
+    public GameObject prefabFloor;//바닥 프리팹
     
     
     
