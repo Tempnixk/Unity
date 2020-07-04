@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
        MoneyIncrease();
        ButtonActiveCheck();
        UpdateRecruitPanelText();
+       CreateFloor();
     }
     
     //소지금 증가
