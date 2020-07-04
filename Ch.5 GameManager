@@ -119,6 +119,25 @@ public class GameManager : MonoBehaviour
        AutoWork.autoIncreasePrice +=employeeCount * 500;
        
        CreateEmployee();
+       }
+       void CreateFloor()
+       {
+            Vector2 bgPosition = GameObject.Find("Background").transform.positon;
+            
+            float nextFloor = (employeeCount + 1) / floorCapacity;
+            
+            float spotX = bgPosition.x;
+            float spotY = bgPosition.y;
+            
+            spotY -= spaceFloor * nextFloor;
+            
+            if(nextFloor * nextFloor;
+            {
+                Instantiate(prefabFloor, new Vector2(spotX, spotY), Quaternion.identity);
+                currentFloor +=1;
+            }
+        }
+       
   }
  
     void ShowInfo()
