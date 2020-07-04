@@ -97,6 +97,13 @@ public class GameManager : MonoBehaviour
                 buttonRecruit.interactble = false;
             }
        }
+       void CreateEmployee()
+       {
+       Vector2 bossSpot = GameObject.Find("Boss").transgom.position;
+       float spotX = bossSpt.x + (employeeCount % width)*space;
+       float spotY = bossSpot.y - (employeeCount/width)*space;
+       Instaniate(prefabEmployee, new Vector2(spotX, spotY), Quaternion.identity);
+       }
   }
  
     void ShowInfo()
