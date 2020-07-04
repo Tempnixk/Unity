@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     public int width; //가로 최대 직원 수
     public float space; //직원 간격
     public GameObject prefabEmployee; // 직원 프리팹 
+    public Text textPerson;
+    
     
     
     
@@ -122,5 +124,9 @@ public class GameManager : MonoBehaviour
             textMoney.text = "0원";
         else
             textMoney.text = Money.Tostring("###,###") + "원";
+        if(employeeCount==0)
+            textPerson.text = "0명";
+        else
+            textPerson.text = employeeCount + "명";
     }
 }
