@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Reflection;
+using UnityEngine;
+
+public class Castle : MonoBehaviour
+{
+    private float MaxHp;
+    private float Damage;
+    private ImageFileMachine GuageBar;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        MaxHp = 10;
+        Damage = 1;
+        GuageBar = GameObject.Find("HpGuage").GetComponent<ImageFileMachine>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
