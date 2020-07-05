@@ -7,7 +7,7 @@ public class AttackEnemy : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) ;
+        if(Input.GetMouseButtonDown(0))
         {
             Vector2 wp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Ray2D ray = new Ray2D(wp, Vector2.zero);
