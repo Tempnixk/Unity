@@ -24,10 +24,13 @@ public class CreateEnemy : MonoBehaviour
         while(true)
         {
             count++;
+            
             float r = Random.Range(limitMin.y, limitMax.y);
             Vector2 creatingPoint = new Vector2(limitMin.x, r);
 
             Instantiate(prefabEnemy, creatingPoint, Quaternion, identity);
+            
+            delay = 10.0f / (count + 4);
             yield return new WaitForSeconds(0.5f);
 
         }
