@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    public TextElementEnumerator scoreText;
+    public text scoreText;
     private float time;
     private int Int_time;
 
