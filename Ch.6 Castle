@@ -8,7 +8,7 @@ public class Castle : MonoBehaviour
 {
     private float MaxHp;
     private float Damage;
-    private ImageFileMachine GuageBar;
+    private Image GuageBar;
 
     // Start is called before the first frame update
     void Start()
