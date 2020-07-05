@@ -23,6 +23,7 @@ public class CreateEnemy : MonoBehaviour
     {
         while(true)
         {
+            count++;
             float r = Random.Range(limitMin.y, limitMax.y);
             Vector2 creatingPoint = new Vector2(limitMin.x, r);
 
