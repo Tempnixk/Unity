@@ -145,6 +145,7 @@ public class GameManager : MonoBehaviour
             {
                 Instantiate(prefabFloor, new Vector2(spotX, spotY), Quaternion.identity);
                 currentFloor +=1;
+                Camera.main.GetComponent<CameraDrag>().limitMinY -= spaceFloor;
             }
         }
        
