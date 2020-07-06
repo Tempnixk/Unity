@@ -33,6 +33,12 @@ public class GameManager : MonoBehaviour
     {
         string moneyString = PlayerPrefs.GetString("MONEY");
         money = long.Parse(moneyString);
+        
+        string path = Application.persistentDataPath + "/save.xml";
+        if(System.IO.File.Exists(path))
+        {
+            Load();
+        }
     }
     
     void Update()
