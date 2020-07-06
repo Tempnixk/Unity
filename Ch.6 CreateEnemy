@@ -11,6 +11,8 @@ public class CreateEnemy : MonoBehaviour
     public GameObject prefabEnemy;
     public Vector2 limitMin;
     public Vector2 limitMax;
+    private float delay;
+    private int count;
 
 
     // Start is called before the first frame update
