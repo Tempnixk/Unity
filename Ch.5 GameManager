@@ -151,7 +151,8 @@ public class GameManager : MonoBehaviour
         }
     private void OnApplicationQuit()
         {
-            PlaterPrefs.SetString("MONEY", money.ToString()):
+            PlayerPrefs.SetString("MONEY", money.ToString());
+            Save();
         }
     void Save()
     {
