@@ -167,7 +167,23 @@ public class GameManager : MonoBehaviour
         
         string path = Application.persistentDataPath + "/save.xml";
         XmlManager.XmlSave<SaveData>(saveData, path);
-  }
+    }
+    void Load()
+    {
+        SaveData saveData = new SaveData();
+        
+        string path = Application.persistentDataPath + "/save.xml";
+        saveData = XmlManager.XmlLoad<SaveData>(path);
+        
+        money = saveData.money;
+        moneyIncreaseAmount = saveData.moneyIncreaseAmount;
+        moneyIncreaseLevel = saveData.moneyIncreaseLevel;
+        moneyIncreasePrice = saveData.moneyIncreasePrice;
+        employeeCount = saveData.employeeCount;
+        AutoWork.autoMoneyIncreaseAmount = saveData.autoMoneyIncreaseAmount;
+        AutoWork.autoIncreasePrice = saveData.autoIncreasePrice;
+    }
+
  
     void ShowInfo()
     {
