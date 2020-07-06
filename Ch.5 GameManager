@@ -148,7 +148,10 @@ public class GameManager : MonoBehaviour
                 Camera.main.GetComponent<CameraDrag>().limitMinY -= spaceFloor;
             }
         }
-       
+        private void OnApplicationQuit()
+        {
+            PlaterPrefs.SetString("MONEY", money.ToString()):
+        }
   }
  
     void ShowInfo()
