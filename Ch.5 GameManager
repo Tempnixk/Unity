@@ -149,10 +149,24 @@ public class GameManager : MonoBehaviour
                 Camera.main.GetComponent<CameraDrag>().limitMinY -= spaceFloor;
             }
         }
-        private void OnApplicationQuit()
+    private void OnApplicationQuit()
         {
             PlaterPrefs.SetString("MONEY", money.ToString()):
         }
+    void Save()
+    {
+        SaveData saveData = new SaveData();
+        
+        saveData.money = money;
+        saveData.moneyIncreaseAmount = moneyIncreaseAmount;
+        saveData.moneyIncreaseLevel = moneyIncreaseLevel;
+        saveData.moneyIncreasePrice = moneyIncreasePrice;
+        saveData.employCount = employCount;
+        saveData.autoMoneyIncreaseAmount = Autowork.autoMoneyIncreaseAmount;
+        saveData.autoIncreasePrice = AutoWork.autoIncreasePrice;
+        
+        string path = Application.persistentDataPath + "/save.xml";
+        XmlManager.XmlSave<SaveData>(saveData, path);
   }
  
     void ShowInfo()
