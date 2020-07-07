@@ -1,0 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerController : MonoBehavioiur
+{
+  public float speed;
+  public float mouseSensitivity;
+  
+  public float RotationLimit;
+  public float currRotationX;
+  
+  Camera MainCamera;
+  Rigidbody rid;
+  
+}
