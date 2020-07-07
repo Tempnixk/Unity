@@ -28,6 +28,15 @@ public class PlayerController : MonoBehavioiur
   
   private void PlayerMove()
   {
+    float moveX = Input.GetAxisRaw("Horizontal");
+    float moveZ = Input.GetAxisRaw("Vertical");
+    
+    Vector3 moveHorizontal = transform.right * moveX;
+    Vector3 moveVertical = transform.forward * moveZ;
+    
+    Vector3 velocity = (moveHorizontal + moveVertical).mormalized * speed;
+    
+    rid.MovePosition(transform.position + velocity * Time.deltaTime);
   }
   
 }
