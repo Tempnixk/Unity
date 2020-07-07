@@ -48,6 +48,15 @@ public class PlayerController : MonoBehavioiur
     rid.MoveRotation(rid.rotation * Quaternion.Euler(playerRotationY));
   }
   
+  private void CameraRotation()
+  {
+    float rotationX = Input.GetAxisRaw("Mouse Y");
+    float cameraRotationX = rotationX * mouseSensitivity;
+    currRoatationX -= cameraRotationX;
+    currRotationX = Mathf.Clamp(currRotationX, -RotationLimit, RotationLimit);
+    
+    MainCamera.transform.localEulerAngles = new Vector3(currRotationX, 0f, 0f);
+  }
   
   
 }
