@@ -19,5 +19,15 @@ public class PlayerController : MonoBehavioiur
     MainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
   }
   
+  void Update()
+  {
+    PlayerMove();
+    PlayerRotation();
+    CameraRotation();
+  }
+  
+  private void PlayerMove()
+  {
+  }
   
 }
