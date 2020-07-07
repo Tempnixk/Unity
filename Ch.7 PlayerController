@@ -39,4 +39,15 @@ public class PlayerController : MonoBehavioiur
     rid.MovePosition(transform.position + velocity * Time.deltaTime);
   }
   
+  private void PlaterRotation()
+  {
+    float rotationY = Input.GetAxisRaw("Mouse X");
+    
+    Vector3 playerRotationY = new Vector3(0f, rotationY, 0f) * mouseSensitivity;
+    
+    rid.MoveRotation(rid.rotation * Quaternion.Euler(playerRotationY));
+  }
+  
+  
+  
 }
