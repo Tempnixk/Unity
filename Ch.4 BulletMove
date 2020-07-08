@@ -16,11 +16,11 @@ public class BulletMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tr.Translate(Vector2.up * speed);
+        tr.Translate(Vector2.up * speed);//(0,1)의 벡터를 가지고 있음. new Vector2(0,1)의 단축형. 해당 스피드로 위로 움직임
     }
     IEnumerator DestroySelf()
     {
         yield return new WaitForSeconds(5.0f);
-        Destroy(this.gameObject);
+        Destroy(this.gameObject);// 게임 오브젝트를 제거하는 함수. this생략 가능, 가독성 위해 보통 남김
     }
 }
