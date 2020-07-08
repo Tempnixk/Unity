@@ -59,10 +59,10 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    void OnDrawGizmos()
+    void OnDrawGizmos()// {}안에 있는 내용 자동 실행
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(limitPoint1, new Vector2(limitPoint2.x, limitPoint2.y));
+        Gizmos.DrawLine(limitPoint1, new Vector2(limitPoint2.x, limitPoint2.y));//첫번째 인자에서(from) 두번째 인자(to)의 좌표로 선을 긋는 함수
         Gizmos.DrawLine(limitPoint1, new Vector2(limitPoint1.x, limitPoint2.y));
         Gizmos.DrawLine(new Vector2(limitPoint1.x, limitPoint2.y), limitPoint2);
         Gizmos.DrawLine(new Vector2(limitPoint2.x, limitPoint1.y), limitPoint2);
