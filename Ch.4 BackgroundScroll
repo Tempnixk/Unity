@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class BackgroundScroll : MonoBehaviour
 {
-    Material mat;
-    float currentYoffset = 0;
-    float speed = 0.08f;
+    Material mat; // Start()함수에서 현재 스크립트가 들어있는 게임 오브젝트의 스프라이트 렌더러 컴포넌트를 가져와 그 안에 들어있는 매테리얼을 가져옴.
+    float currentYoffset = 0;//Y축의 오프셋값 설정
+    float speed = 0.08f;//배경이 스크롤 되는 속도
 
     void Start()
     {
@@ -15,9 +15,9 @@ public class BackgroundScroll : MonoBehaviour
     }
 
     
-    void Update()
+    void Update()// 실질적으로 배경이 움직이도록 하는 부분
     {
         currentYoffset += speed * Time.deltaTime;
-        mat.mainTextureOffset = new Vector2(0, currentYoffset);
+        mat.mainTextureOffset = new Vector2(0, currentYoffset); // 세로축으로 움직이게 함.
     }
 }
