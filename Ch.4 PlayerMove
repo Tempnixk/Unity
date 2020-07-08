@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float speed;
+    public float speed;// public 은 '이 변수를 다른곳에도 공적으로 사용하겠다'는 의미
 
     Transform tr;
     Vector2 mousePosition;
