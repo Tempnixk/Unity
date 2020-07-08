@@ -17,7 +17,7 @@ public class PlayerMove : MonoBehaviour
         void Start()
     {
         tr = GetComponent<Transform>();
-        StartCoroutine(FireBullet());
+        StartCoroutine(FireBullet());//코루틴 함수는 호출해야만 실행 가능, 실행 구문임
     }
 
     void Update()
