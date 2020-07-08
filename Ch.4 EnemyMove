@@ -37,6 +37,11 @@ public class EnemyMove : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject.Find("GameManager").GetComponent<Score>().score += 10;
+        /*
+        게임오브젝트.컴포넌트.변수
+        GameObject.Find("GameManager").GetComponent<Score>().score
+        경기도.안양시.안양동 의 개념으로 이해
+        */
         Destroy(this.gameObject);
         Destroy(collision.gameObject);
     }
