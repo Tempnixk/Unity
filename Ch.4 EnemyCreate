@@ -30,7 +30,7 @@ public class EnemyCreate : MonoBehaviour
 
             Instantiate(prefabEnemy, creatingPoint, Quaternion.identity);
 
-            float creatingTime = Random.Range(0.5f, 3.0f);
+            float creatingTime = Random.Range(0.5f, 3.0f);// 첫번째 인자와 두번째 인자 사이에서 랜덤한 값을 돌려주는 함수. float과int에서 사용법이 다름.
             yield return new WaitForSeconds(creatingTime);
         }
     }
