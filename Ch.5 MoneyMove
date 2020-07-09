@@ -10,7 +10,7 @@ public class MoneyMove : MonoBehaviour
     Text txt;
     void Start()
     {
-            txt = transform.GetComponentInChildren<Text>();
+            txt = transform.GetComponentInChildren<Text>();// 오브젝트의 자식들 중 해당 컴포넌트를 가져옴
             
             GameManager gm = GameObject.Find("GameManager").GetImponent<GameManager>();
             txt.text="+"+gm.moneyInncreaseAmout.ToString("###,###");
