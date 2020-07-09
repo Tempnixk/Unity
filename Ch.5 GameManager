@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
-    public long money;
+    public long money;// int 는 큰 숫자 표현 X
     public long moneyIncreaseAmount;
     public GameObject prefabMoney;
     public Text textMoney;
