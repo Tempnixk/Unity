@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AutoWork : MonoBehaviour
 {
-    public static long autoMoneyIncreaseAmount = 10;// static: 이 변수는 하나만 존재한다는 의미
+    public static long autoMoneyIncreaseAmount = 10;// static: '이 변수는 하나만 존재한다'는 의미
     public static long autoIncreasePrice = 1000;
     
     void Start()
@@ -14,7 +14,7 @@ public class AutoWork : MonoBehaviour
     
     IEnumerator Work()
     {
-        while(true)
+        while(true)// 무한반복
         {
         //GameManger gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         //gm.money += autoMoneyIncreaseAmount;
