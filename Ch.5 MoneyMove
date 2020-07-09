@@ -18,7 +18,7 @@ public class MoneyMove : MonoBehaviour
             Destroy(this.gameObject, 10f);
     }
     
-    void Update()
+    void Update()//목표 위치로 이동하는 내용과 그림 텍스트를 다른 색은 유지한 채 점차 알파(투명도)값만을 감소하며 투명하게 만드는 부분, RGD투명도 순서로 값이 들어가며 0~1값을 가짐(1일때 100%)
     {
     transform.position = Vector2.MoveTowards(transform.position, point, Time.deltaTime * 10f);
     
