@@ -17,7 +17,7 @@ public class Work : MonoBehaviour
     {
       if(UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject() == false)
         {
-          anim.SetTrigger("Click");
+          anim.SetTrigger("Click");// 중요한 부분, anim은 속한 게임 오브젝트의 애니메이터 컴포넌트 지칭
         }
     }
   }
