@@ -59,6 +59,11 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D collsion)
+    {
+        SceneManager.LoadScene("GameOver"); //해당 씬의 이름을 적으면 불러오기 가능함.
+    }
+    
     void OnDrawGizmos()// {}안에 있는 내용 자동 실행
     {
         Gizmos.color = Color.red;
