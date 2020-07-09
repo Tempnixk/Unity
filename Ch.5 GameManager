@@ -76,9 +76,9 @@ public class GameManager : MonoBehaviour
         
     void UpdateRecruitPanelText()
     {
-        textRecruit.text = "Lv." + employeeCount + " 직원 고용\n\n";
+        textRecruit.text = "Lv." + employeeCount + " 직원 고용\n\n";// \n의 의미는 '다음줄로 넘김'
         textRecruit.text += "직원 1초 당 단가>\n";
-        textRecruit.text += AutoWork.autoMoneyIncreaseAmount.ToString("###,###")+"원\n";
+        textRecruit.text += AutoWork.autoMoneyIncreaseAmount.ToString("###,###")+"원\n"; // ,를 사용하여 가독성을 높인다
         textRecruit.text += "업그레이드 가격>\n";
         textRecruit.text += AutoWork.autoIncreasePrice.ToString("###,###")+"원";
     }
